@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b4bdb">
+  <meta name="description" content="Arcade Nuvem — uma coleção independente de minijogos para jogar no navegador.">
+  <title>Arcade Nuvem — jogos para todo momento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" id="homeButton" aria-label="Arcade Nuvem, início">
+      <span class="brand-mark">✦</span><span>arcade<span class="brand-accent">nuvem</span></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Abrir pesquisa" title="Pesquisar">⌕</button>
+      <button class="profile-chip" id="surpriseButton" title="Escolher um jogo aleatório">🎲 <span>Surpreenda-me</span></button>
+    </div>
+  </header>
+
+  <main id="catalogView">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">SEU INTERVALO COMEÇA AQUI</span>
+        <h1>Um universo de<br><span>diversão</span> na tela.</h1>
+        <p>Jogos rápidos, desafios divertidos e novas descobertas. Escolha um e comece a jogar.</p>
+        <button class="primary-button" id="exploreButton">Explorar jogos <span>→</span></button>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="float-card float-a">🕹️</div><div class="float-card float-b">🚀</div>
+        <div class="float-card float-c">⭐</div><div class="float-card float-d">🎯</div>
+        <div class="hero-ball">✦</div>
+      </div>
+      <div class="hero-spark spark-one">✳</div><div class="hero-spark spark-two">✦</div>
+    </section>
+
+    <section class="catalog-section" id="gamesSection">
+      <div class="section-heading">
+        <div><span class="eyebrow dark-eyebrow">ESCOLHA SUA AVENTURA</span><h2>Encontre seu jogo</h2></div>
+        <div class="search-wrap" id="searchWrap">
+          <input id="searchInput" type="search" placeholder="Buscar jogos..." aria-label="Buscar jogos">
+          <button id="clearSearch" aria-label="Limpar pesquisa">×</button>
+        </div>
+      </div>
+      <nav class="filters" id="categoryFilters" aria-label="Categorias"></nav>
+      <div class="shelf-heading"><h3 id="shelfTitle">Todos os jogos</h3><span id="gameCount"></span></div>
+      <div class="game-grid" id="gameGrid"></div>
+      <div class="empty-state hidden" id="emptyState"><span>🪐</span><h3>Nenhum jogo encontrado</h3><p>Tente outro nome ou categoria.</p></div>
+    </section>
+    <footer><span class="footer-brand">✦ arcade nuvem</span><span>Um projeto independente de jogos para navegador.</span></footer>
+  </main>
+
+  <section class="game-screen hidden" id="gameScreen" aria-live="polite">
+    <div class="game-toolbar">
+      <button class="back-button" id="backButton">← <span>Voltar aos jogos</span></button>
+      <div class="playing-label"><span class="live-dot"></span> EM JOGO</div>
+      <button class="icon-button" id="fullscreenButton" title="Tela cheia" aria-label="Tela cheia">⛶</button>
+    </div>
+    <div class="game-heading"><div><span class="eyebrow dark-eyebrow" id="gameCategory">MINIJOGO</span><h1 id="gameTitle">Nome do jogo</h1><p id="gameDescription"></p></div><button class="secondary-button" id="restartButton">↻ Reiniciar</button></div>
+    <div class="game-stage" id="gameStage"></div>
+    <p class="game-note">Dica: os jogos desta demonstração são originais e executados localmente no seu navegador.</p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
